@@ -1,0 +1,84 @@
+buildscript {
+    ext.kotlin_version = '1.6.21'
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.0'
+        classpath 'com.google.gms:google-services:4.3.10'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+      //  maven { url "https://maven.google.com" }
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+    project.evaluationDependsOn(':app')
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Future<Map<int, TensorBuffer>> runModelOnImage(image.Image imageSection) async {
+//     // Get the bytes list from the image section
+//     Uint8List imgBytes = imageSection.getBytes(format: image.Format.rgb);
+
+//     // Normalize image data to between 0 and 1, and transform into Float32List
+//     Float32List imgAsList = Float32List.fromList(
+//       imgBytes.map((byte) => byte / 255.0).toList(),
+//     );
+
+//     // Confirming the total number of elements matches
+//     assert(imgAsList.length == imageSection.width * imageSection.height * 3);
+
+//     // Prepare the input tensor (size according to your model)
+//     TensorBuffer inputBuffer = TensorBuffer.createFixedSize(
+//       [1, imageSection.width, imageSection.height, 3],
+//       TfLiteType.float32,
+//     );
+
+//     final buffer = Float32List.fromList(imgAsList).buffer;
+//     inputBuffer.loadBuffer(buffer);
+
+//     // Output tensors map
+//     TensorBuffer outputBuffer = TensorBuffer.createFixedSize(
+//       [1, 722, 84],  // This size might need to be adjusted based on your model output
+//       TfLiteType.float32,
+//     );
+//     Map<int, TensorBuffer> outputs = {0: outputBuffer};
+
+//     // Running the interpreter
+//     _interpreter?.runForMultipleInputs([inputBuffer.getBuffer()], outputs);
+//     print(outputs);
+//     // Get output tensor shape
+//     List<int> outputShape = _interpreter!.getOutputTensor(0).shape;
+
+// // Print the shape
+//     print('Output tensor shape: $outputShape');
+//     return outputs;
+//   }

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Cattle Demo</string>
+    <string name="facebook_app_id">697668704776848</string>
+    <string name="fb_login_protocol_scheme">fb697668704776848</string>
+    <string name="facebook_client_token">9f4c2c6a5407f1e705a3b91fdd219617</string>
+</resources>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "514733731471",
+    "project_id": "hearty-project",
+    "storage_bucket": "hearty-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:514733731471:android:4878b0bad7892f86b94afa",
+        "android_client_info": {
+          "package_name": "com.example.hearty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "514733731471-lq2f9jah7je6k8r28u191vrdadhcl53q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBV1PVNDgXqxpHYl3TFNnq-Cym09YLwUuM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "514733731471-lq2f9jah7je6k8r28u191vrdadhcl53q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
